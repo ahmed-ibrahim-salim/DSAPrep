@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		EF25AF342969F5E900EAA303 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25AF332969F5E900EAA303 /* Stack.swift */; };
 		EF25AF362969F73100EAA303 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF25AF352969F73100EAA303 /* StackTests.swift */; };
+		EF6413DD296B08A100B73FE4 /* CountBits.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6413DC296B08A100B73FE4 /* CountBits.swift */; };
+		EF6413DF296B0BB700B73FE4 /* CountBitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF6413DE296B0BB700B73FE4 /* CountBitsTests.swift */; };
 		EF8481F229689B4C00DCA6A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8481F129689B4C00DCA6A6 /* AppDelegate.swift */; };
 		EF8481F429689B4C00DCA6A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8481F329689B4C00DCA6A6 /* SceneDelegate.swift */; };
 		EF8481F629689B4C00DCA6A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8481F529689B4C00DCA6A6 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		EF25AF332969F5E900EAA303 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		EF25AF352969F73100EAA303 /* StackTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
+		EF6413DC296B08A100B73FE4 /* CountBits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountBits.swift; sourceTree = "<group>"; };
+		EF6413DE296B0BB700B73FE4 /* CountBitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountBitsTests.swift; sourceTree = "<group>"; };
 		EF8481EE29689B4C00DCA6A6 /* DSAPrep.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSAPrep.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8481F129689B4C00DCA6A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8481F329689B4C00DCA6A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF6413D9296B085E00B73FE4 /* Problems */ = {
+			isa = PBXGroup;
+			children = (
+				EF6413DC296B08A100B73FE4 /* CountBits.swift */,
+			);
+			path = Problems;
+			sourceTree = "<group>";
+		};
+		EF6413DA296B086C00B73FE4 /* ProblemsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF6413DE296B0BB700B73FE4 /* CountBitsTests.swift */,
+			);
+			path = ProblemsTests;
+			sourceTree = "<group>";
+		};
+		EF6413DB296B087500B73FE4 /* DataStructuresTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFA0E76C2969708700DE96DD /* DynamicArrayTests.swift */,
+				EF25AF352969F73100EAA303 /* StackTests.swift */,
+			);
+			path = DataStructuresTests;
+			sourceTree = "<group>";
+		};
 		EF8481E529689B4C00DCA6A6 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +113,7 @@
 		EF8481F029689B4C00DCA6A6 /* DSAPrep */ = {
 			isa = PBXGroup;
 			children = (
+				EF6413D9296B085E00B73FE4 /* Problems */,
 				EF84820829689B8400DCA6A6 /* DataStructures */,
 				EF8481F129689B4C00DCA6A6 /* AppDelegate.swift */,
 				EF8481F329689B4C00DCA6A6 /* SceneDelegate.swift */,
@@ -108,8 +138,8 @@
 		EFA0E76B2969708700DE96DD /* DSAPrepTests */ = {
 			isa = PBXGroup;
 			children = (
-				EFA0E76C2969708700DE96DD /* DynamicArrayTests.swift */,
-				EF25AF352969F73100EAA303 /* StackTests.swift */,
+				EF6413DB296B087500B73FE4 /* DataStructuresTests */,
+				EF6413DA296B086C00B73FE4 /* ProblemsTests */,
 			);
 			path = DSAPrepTests;
 			sourceTree = "<group>";
@@ -220,6 +250,7 @@
 				EF84820629689B7100DCA6A6 /* DynamicArray.swift in Sources */,
 				EF8481F229689B4C00DCA6A6 /* AppDelegate.swift in Sources */,
 				EF8481F429689B4C00DCA6A6 /* SceneDelegate.swift in Sources */,
+				EF6413DD296B08A100B73FE4 /* CountBits.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +260,7 @@
 			files = (
 				EF25AF362969F73100EAA303 /* StackTests.swift in Sources */,
 				EFA0E76D2969708700DE96DD /* DynamicArrayTests.swift in Sources */,
+				EF6413DF296B0BB700B73FE4 /* CountBitsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

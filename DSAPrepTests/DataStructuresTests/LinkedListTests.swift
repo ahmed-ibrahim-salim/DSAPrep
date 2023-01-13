@@ -9,11 +9,16 @@ import XCTest
 @testable import DSAPrep
 
 final class LinkedListTests: XCTestCase {
-
+    
+    var linkedList: LinkedList<Int>!
+    
     override func setUpWithError() throws {
+        linkedList = LinkedList<Int>()
+        linkedList.append(values: 1,2,3)
     }
 
     override func tearDownWithError() throws {
+        linkedList = nil
     }
 
     func testNodes() throws {
@@ -27,42 +32,40 @@ final class LinkedListTests: XCTestCase {
         print(node1)
     }
     
-    func test_PushTolinkedList(){
-        var linkedList = LinkedList<Int>()
-        linkedList.push(value: 1)
-        linkedList.push(value: 2)
-        linkedList.push(value: 3)
-        
-        print(linkedList)
-    }
-    func test_AppendTolinkedList(){
-        var linkedList = LinkedList<Int>()
-        linkedList.append(value: 1)
-        linkedList.append(value: 2)
-        linkedList.append(value: 3)
-        
-        print(linkedList)
-    }
-    
     func testFindNode(){
-        var linkedList = LinkedList<Int>()
-        linkedList.append(value: 1)
-        linkedList.append(value: 2)
-        linkedList.append(value: 3)
         
         XCTAssertEqual(3, linkedList.node(at: 2)?.value)
     }
     func test_InsertNodeAt(){
         
-        var linkedList = LinkedList<Int>()
-        linkedList.append(value: 1)
-        linkedList.append(value: 2)
-        linkedList.append(value: 3)
-        
+        let insertedNode0 = linkedList.insert(after: 6, node: Node(value: 5))
         let insertedNode = linkedList.insert(after: 1, node: Node(value: 0))
         
         print(linkedList)
-        XCTAssertEqual(0, insertedNode?.value)
-        }
+        XCTAssertEqual(5, insertedNode0?.value)
 
+        XCTAssertEqual(0, insertedNode?.value)
+    }
+    func test_popItem(){
+        // when
+        let popedItem = linkedList.pop()
+        // then
+        XCTAssertEqual(1, popedItem?.value)
+    }
+    func test_removeLastItem(){
+        // when
+        let removedItem = linkedList.removeLast()
+        print(linkedList)
+
+        // then
+        XCTAssertEqual(3, removedItem?.value)
+    }
+    func test_removeAfter(){
+        // when
+        let removedItem = linkedList.remove(after: 0, node: Node(value: 4))
+        print(linkedList)
+
+        // then
+        XCTAssertEqual(2, removedItem?.value)
+    }
 }
